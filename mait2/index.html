@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster - Learn Programming & DSA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>CodeMaster</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#dsa-sheet">DSA Sheet</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#practice">Practice</a></li>
+            <li><a href="dsa-docs.html">Documentation</a></li>
+            <li><a href="#login" class="login-btn">Login</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Master Programming & DSA</h1>
+            <p>Learn, Practice, and Excel in your coding journey</p>
+            <button class="cta-button">Start Learning</button>
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <h2>Popular Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="DSA Course">
+                <h3>Complete DSA Course</h3>
+                <p>Master Data Structures and Algorithms from basics to advanced</p>
+                <div class="course-details">
+                    <span><i class="fas fa-clock"></i> 6 months</span>
+                    <span><i class="fas fa-level-up-alt"></i> All Levels</span>
+                    <span><i class="fas fa-video"></i> 200+ Lectures</span>
+                </div>
+                <div class="course-price">
+                    <span class="price">₹999</span>
+                    <span class="original-price">₹1999</span>
+                </div>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Learn full-stack web development with modern technologies</p>
+                <div class="course-details">
+                    <span><i class="fas fa-clock"></i> 8 months</span>
+                    <span><i class="fas fa-level-up-alt"></i> Beginner</span>
+                    <span><i class="fas fa-video"></i> 300+ Lectures</span>
+                </div>
+                <div class="course-price">
+                    <span class="price">₹1299</span>
+                    <span class="original-price">₹2499</span>
+                </div>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="System Design">
+                <h3>System Design</h3>
+                <p>Master the art of designing scalable systems</p>
+                <div class="course-details">
+                    <span><i class="fas fa-clock"></i> 4 months</span>
+                    <span><i class="fas fa-level-up-alt"></i> Advanced</span>
+                    <span><i class="fas fa-video"></i> 150+ Lectures</span>
+                </div>
+                <div class="course-price">
+                    <span class="price">₹1499</span>
+                    <span class="original-price">₹2999</span>
+                </div>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Machine Learning">
+                <h3>Machine Learning</h3>
+                <p>Learn AI and ML from scratch to advanced level</p>
+                <div class="course-details">
+                    <span><i class="fas fa-clock"></i> 6 months</span>
+                    <span><i class="fas fa-level-up-alt"></i> Intermediate</span>
+                    <span><i class="fas fa-video"></i> 250+ Lectures</span>
+                </div>
+                <div class="course-price">
+                    <span class="price">₹1799</span>
+                    <span class="original-price">₹3499</span>
+                </div>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Mobile Development">
+                <h3>Mobile Development</h3>
+                <p>Build iOS and Android apps from scratch</p>
+                <div class="course-details">
+                    <span><i class="fas fa-clock"></i> 7 months</span>
+                    <span><i class="fas fa-level-up-alt"></i> Beginner</span>
+                    <span><i class="fas fa-video"></i> 280+ Lectures</span>
+                </div>
+                <div class="course-price">
+                    <span class="price">₹1399</span>
+                    <span class="original-price">₹2799</span>
+                </div>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="DevOps">
+                <h3>DevOps & Cloud</h3>
+                <p>Master DevOps tools and cloud platforms</p>
+                <div class="course-details">
+                    <span><i class="fas fa-clock"></i> 5 months</span>
+                    <span><i class="fas fa-level-up-alt"></i> Intermediate</span>
+                    <span><i class="fas fa-video"></i> 200+ Lectures</span>
+                </div>
+                <div class="course-price">
+                    <span class="price">₹1599</span>
+                    <span class="original-price">₹3199</span>
+                </div>
+                <button>Enroll Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="dsa-sheet" class="dsa-sheet">
+        <h2>Striver's DSA Sheet</h2>
+        <div class="sheet-container">
+            <div class="topic-section">
+                <h3>Arrays</h3>
+                <ul>
+                    <li><a href="https://leetcode.com/problems/two-sum/" target="_blank">Two Sum</a></li>
+                    <li><a href="https://leetcode.com/problems/maximum-subarray/" target="_blank">Maximum Subarray</a></li>
+                    <li><a href="https://leetcode.com/problems/rotate-array/" target="_blank">Rotate Array</a></li>
+                    <li><a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank">Merge Sorted Array</a></li>
+                    <li><a href="https://leetcode.com/problems/missing-number/" target="_blank">Missing Number</a></li>
+                    <li><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/" target="_blank">Find All Numbers Disappeared in an Array</a></li>
+                </ul>
+            </div>
+            <div class="topic-section">
+                <h3>Linked Lists</h3>
+                <ul>
+                    <li><a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">Reverse Linked List</a></li>
+                    <li><a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">Linked List Cycle</a></li>
+                    <li><a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">Merge Two Sorted Lists</a></li>
+                    <li><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">Remove Nth Node From End of List</a></li>
+                    <li><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">Add Two Numbers</a></li>
+                </ul>
+            </div>
+            <div class="topic-section">
+                <h3>Trees</h3>
+                <ul>
+                    <li><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank">Binary Tree Inorder Traversal</a></li>
+                    <li><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">Maximum Depth of Binary Tree</a></li>
+                    <li><a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">Validate Binary Search Tree</a></li>
+                    <li><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">Binary Tree Level Order Traversal</a></li>
+                    <li><a href="https://leetcode.com/problems/symmetric-tree/" target="_blank">Symmetric Tree</a></li>
+                </ul>
+            </div>
+            <div class="topic-section">
+                <h3>Dynamic Programming</h3>
+                <ul>
+                    <li><a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">Climbing Stairs</a></li>
+                    <li><a href="https://leetcode.com/problems/fibonacci-number/" target="_blank">Fibonacci Number</a></li>
+                    <li><a href="https://leetcode.com/problems/house-robber/" target="_blank">House Robber</a></li>
+                    <li><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank">Best Time to Buy and Sell Stock</a></li>
+                    <li><a href="https://leetcode.com/problems/coin-change/" target="_blank">Coin Change</a></li>
+                </ul>
+            </div>
+            <div class="topic-section">
+                <h3>Strings</h3>
+                <ul>
+                    <li><a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">Valid Parentheses</a></li>
+                    <li><a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank">Longest Palindromic Substring</a></li>
+                    <li><a href="https://leetcode.com/problems/string-to-integer-atoi/" target="_blank">String to Integer (atoi)</a></li>
+                    <li><a href="https://leetcode.com/problems/implement-strstr/" target="_blank">Implement strStr()</a></li>
+                    <li><a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank">Longest Common Prefix</a></li>
+                </ul>
+            </div>
+            <div class="topic-section">
+                <h3>Graphs</h3>
+                <ul>
+                    <li><a href="https://leetcode.com/problems/number-of-islands/" target="_blank">Number of Islands</a></li>
+                    <li><a href="https://leetcode.com/problems/course-schedule/" target="_blank">Course Schedule</a></li>
+                    <li><a href="https://leetcode.com/problems/rotting-oranges/" target="_blank">Rotting Oranges</a></li>
+                    <li><a href="https://leetcode.com/problems/surrounded-regions/" target="_blank">Surrounded Regions</a></li>
+                    <li><a href="https://leetcode.com/problems/word-ladder/" target="_blank">Word Ladder</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="30day-plan" class="thirty-day-plan">
+        <h2>30 Days DSA Challenge</h2>
+        <div class="plan-container">
+            <div class="week-section">
+                <h3>Week 1: Arrays & Basic Math</h3>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 1</span>
+                        <span class="day-topic">Arrays</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=37E9ckMDdTk" target="_blank">Arrays Introduction</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=37E9ckMDdTk" target="_blank">2D Arrays</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/two-sum/" target="_blank">Two Sum</a></li>
+                                <li><a href="https://leetcode.com/problems/maximum-subarray/" target="_blank">Maximum Subarray</a></li>
+                                <li><a href="https://leetcode.com/problems/rotate-array/" target="_blank">Rotate Array</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 2</span>
+                        <span class="day-topic">Basic Math</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=37E9ckMDdTk" target="_blank">Basic Math Concepts</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=37E9ckMDdTk" target="_blank">Number Theory</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/count-primes/" target="_blank">Count Primes</a></li>
+                                <li><a href="https://leetcode.com/problems/power-of-two/" target="_blank">Power of Two</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-section">
+                <h3>Week 2: Linked Lists</h3>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 8</span>
+                        <span class="day-topic">Linked Lists</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=37E9ckMDdTk" target="_blank">Singly Linked List</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=37E9ckMDdTk" target="_blank">Doubly Linked List</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">Reverse Linked List</a></li>
+                                <li><a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">Linked List Cycle</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-section">
+                <h3>Week 3: Trees</h3>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 15</span>
+                        <span class="day-topic">Binary Trees</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=37E9ckMDdTk" target="_blank">Tree Traversals</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=37E9ckMDdTk" target="_blank">Binary Search Trees</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank">Inorder Traversal</a></li>
+                                <li><a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">Validate BST</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-section">
+                <h3>Week 4: Dynamic Programming</h3>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 22</span>
+                        <span class="day-topic">Introduction to DP</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">Dynamic Programming Introduction</a></li>
+                                <li><a href="https://youtu.be/GY0O57llkKQ" target="_blank">Memoization & Tabulation</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/fibonacci-number/" target="_blank">Fibonacci Number</a></li>
+                                <li><a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">Climbing Stairs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 23</span>
+                        <span class="day-topic">1D DP Problems</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">1D DP Problems</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/house-robber/" target="_blank">House Robber</a></li>
+                                <li><a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">House Robber II</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 24</span>
+                        <span class="day-topic">2D DP Problems</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">2D DP Problems</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/unique-paths/" target="_blank">Unique Paths</a></li>
+                                <li><a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank">Minimum Path Sum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 25</span>
+                        <span class="day-topic">Knapsack Problems</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">Knapsack Problems</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank">Partition Equal Subset Sum</a></li>
+                                <li><a href="https://leetcode.com/problems/target-sum/" target="_blank">Target Sum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 26</span>
+                        <span class="day-topic">LCS Problems</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">Longest Common Subsequence</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">Longest Common Subsequence</a></li>
+                                <li><a href="https://leetcode.com/problems/edit-distance/" target="_blank">Edit Distance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 27</span>
+                        <span class="day-topic">Matrix Chain Multiplication</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">Matrix Chain Multiplication</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/burst-balloons/" target="_blank">Burst Balloons</a></li>
+                                <li><a href="https://leetcode.com/problems/minimum-score-triangulation-of-polygon/" target="_blank">Minimum Score Triangulation of Polygon</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 28</span>
+                        <span class="day-topic">DP on Trees</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">DP on Trees</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">Diameter of Binary Tree</a></li>
+                                <li><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">Binary Tree Maximum Path Sum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-section">
+                <h3>Week 5: Advanced Topics</h3>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 29</span>
+                        <span class="day-topic">Trie & Segment Tree</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">Trie Data Structure</a></li>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">Segment Tree</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/implement-trie-prefix-tree/" target="_blank">Implement Trie</a></li>
+                                <li><a href="https://leetcode.com/problems/range-sum-query-mutable/" target="_blank">Range Sum Query - Mutable</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-number">Day 30</span>
+                        <span class="day-topic">Final Practice</span>
+                    </div>
+                    <div class="day-content">
+                        <div class="lecture">
+                            <h4>Lecture</h4>
+                            <ul>
+                                <li><a href="https://youtu.be/tyB0ztf0DNY" target="_blank">Revision of Important Topics</a></li>
+                            </ul>
+                        </div>
+                        <div class="practice">
+                            <h4>Practice Problems</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">Merge K Sorted Lists</a></li>
+                                <li><a href="https://leetcode.com/problems/lru-cache/" target="_blank">LRU Cache</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="roadmap">
+        <h2>DSA Learning Roadmap</h2>
+        <div class="roadmap-container">
+            <div class="roadmap-step">
+                <div class="step-number">1</div>
+                <h3>Basic Programming</h3>
+                <p>Learn programming fundamentals and basic syntax</p>
+            </div>
+            <div class="roadmap-step">
+                <div class="step-number">2</div>
+                <h3>Data Structures</h3>
+                <p>Master basic to advanced data structures</p>
+            </div>
+            <div class="roadmap-step">
+                <div class="step-number">3</div>
+                <h3>Algorithms</h3>
+                <p>Learn various algorithms and their implementations</p>
+            </div>
+            <div class="roadmap-step">
+                <div class="step-number">4</div>
+                <h3>Problem Solving</h3>
+                <p>Practice coding problems and competitive programming</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="practice" class="practice">
+        <h2>Practice Problems</h2>
+        <div class="practice-container">
+            <div class="difficulty-section">
+                <h3>Easy</h3>
+                <div class="problem-list">
+                    <div class="problem-card">
+                        <div class="problem-header">
+                            <h4>Two Sum</h4>
+                            <span class="difficulty easy">Easy</span>
+                        </div>
+                        <p>Given an array of integers nums and an integer target, return indices of the two numbers in nums such that they add up to target.</p>
+                        <div class="problem-stats">
+                            <span><i class="fas fa-users"></i> 1.2M solved</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                        <div class="problem-tags">
+                            <span>Array</span>
+                            <span>Hash Table</span>
+                        </div>
+                        <button class="solve-btn">Solve Now</button>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-header">
+                            <h4>Valid Parentheses</h4>
+                            <span class="difficulty easy">Easy</span>
+                        </div>
+                        <p>Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.</p>
+                        <div class="problem-stats">
+                            <span><i class="fas fa-users"></i> 980K solved</span>
+                            <span><i class="fas fa-star"></i> 4.7/5</span>
+                        </div>
+                        <div class="problem-tags">
+                            <span>String</span>
+                            <span>Stack</span>
+                        </div>
+                        <button class="solve-btn">Solve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="difficulty-section">
+                <h3>Medium</h3>
+                <div class="problem-list">
+                    <div class="problem-card">
+                        <div class="problem-header">
+                            <h4>Add Two Numbers</h4>
+                            <span class="difficulty medium">Medium</span>
+                        </div>
+                        <p>You are given two non-empty linked lists representing two non-negative integers. Add the two numbers and return the sum as a linked list.</p>
+                        <div class="problem-stats">
+                            <span><i class="fas fa-users"></i> 850K solved</span>
+                            <span><i class="fas fa-star"></i> 4.6/5</span>
+                        </div>
+                        <div class="problem-tags">
+                            <span>Linked List</span>
+                            <span>Math</span>
+                        </div>
+                        <button class="solve-btn">Solve Now</button>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-header">
+                            <h4>Longest Palindromic Substring</h4>
+                            <span class="difficulty medium">Medium</span>
+                        </div>
+                        <p>Given a string s, return the longest palindromic substring in s.</p>
+                        <div class="problem-stats">
+                            <span><i class="fas fa-users"></i> 720K solved</span>
+                            <span><i class="fas fa-star"></i> 4.5/5</span>
+                        </div>
+                        <div class="problem-tags">
+                            <span>String</span>
+                            <span>Dynamic Programming</span>
+                        </div>
+                        <button class="solve-btn">Solve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="difficulty-section">
+                <h3>Hard</h3>
+                <div class="problem-list">
+                    <div class="problem-card">
+                        <div class="problem-header">
+                            <h4>Median of Two Sorted Arrays</h4>
+                            <span class="difficulty hard">Hard</span>
+                        </div>
+                        <p>Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.</p>
+                        <div class="problem-stats">
+                            <span><i class="fas fa-users"></i> 450K solved</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                        <div class="problem-tags">
+                            <span>Array</span>
+                            <span>Binary Search</span>
+                        </div>
+                        <button class="solve-btn">Solve Now</button>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-header">
+                            <h4>Regular Expression Matching</h4>
+                            <span class="difficulty hard">Hard</span>
+                        </div>
+                        <p>Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where: '.' Matches any single character.</p>
+                        <div class="problem-stats">
+                            <span><i class="fas fa-users"></i> 380K solved</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                        <div class="problem-tags">
+                            <span>String</span>
+                            <span>Dynamic Programming</span>
+                        </div>
+                        <button class="solve-btn">Solve Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CodeMaster</h3>
+                <p>Your journey to coding excellence starts here</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#dsa-sheet">DSA Sheet</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CodeMaster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

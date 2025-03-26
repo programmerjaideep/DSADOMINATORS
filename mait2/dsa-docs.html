@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Documentation - CodeMaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="docs.css">
+    <link rel="stylesheet" href="interactive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-cpp.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>CodeMaster</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#data-structures">Data Structures</a></li>
+            <li><a href="#algorithms">Algorithms</a></li>
+            <li><a href="#problems">Problems</a></li>
+            <li><a href="#practice">Practice</a></li>
+        </ul>
+    </nav>
+
+    <div class="docs-container">
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Search documentation...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="sidebar-content">
+                <h3>Data Structures</h3>
+                <ul>
+                    <li><a href="#arrays">Arrays</a></li>
+                    <li><a href="#linked-lists">Linked Lists</a></li>
+                    <li><a href="#stacks">Stacks</a></li>
+                    <li><a href="#queues">Queues</a></li>
+                    <li><a href="#trees">Trees</a></li>
+                    <li><a href="#graphs">Graphs</a></li>
+                    <li><a href="#heaps">Heaps</a></li>
+                    <li><a href="#hashing">Hashing</a></li>
+                </ul>
+
+                <h3>Algorithms</h3>
+                <ul>
+                    <li><a href="#sorting">Sorting</a></li>
+                    <li><a href="#searching">Searching</a></li>
+                    <li><a href="#recursion">Recursion</a></li>
+                    <li><a href="#backtracking">Backtracking</a></li>
+                    <li><a href="#dp">Dynamic Programming</a></li>
+                    <li><a href="#greedy">Greedy Algorithms</a></li>
+                    <li><a href="#divide-conquer">Divide & Conquer</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="arrays" class="doc-section topic-section">
+                <h2>Arrays</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>An array is a linear data structure that collects elements of the same data type and stores them together in contiguous and adjacent memory locations.</p>
+                    
+                    <h3>Characteristics</h3>
+                    <ul>
+                        <li>Elements are stored in contiguous memory locations</li>
+                        <li>Index-based access</li>
+                        <li>Fixed size (in most programming languages)</li>
+                        <li>Homogeneous elements</li>
+                    </ul>
+
+                    <h3>Operations</h3>
+                    <div class="code-example">
+                        <h4>Basic Operations</h4>
+                        <pre><code class="language-cpp">
+// Insertion
+void insert(int arr[], int n, int x, int pos) {
+    for(int i = n; i >= pos; i--)
+        arr[i+1] = arr[i];
+    arr[pos] = x;
+}
+
+// Deletion
+void delete(int arr[], int n, int pos) {
+    for(int i = pos; i < n-1; i++)
+        arr[i] = arr[i+1];
+}
+
+// Search
+int search(int arr[], int n, int x) {
+    for(int i = 0; i < n; i++)
+        if(arr[i] == x)
+            return i;
+    return -1;
+}
+                        </code></pre>
+                    </div>
+
+                    <h3>Time Complexity</h3>
+                    <table class="complexity-table">
+                        <tr>
+                            <th>Operation</th>
+                            <th>Time Complexity</th>
+                        </tr>
+                        <tr>
+                            <td>Access</td>
+                            <td>O(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Search</td>
+                            <td>O(n)</td>
+                        </tr>
+                        <tr>
+                            <td>Insertion</td>
+                            <td>O(n)</td>
+                        </tr>
+                        <tr>
+                            <td>Deletion</td>
+                            <td>O(n)</td>
+                        </tr>
+                    </table>
+
+                    <h3>Applications</h3>
+                    <ul>
+                        <li>Used in implementation of other data structures like stacks, queues</li>
+                        <li>Used for different sorting algorithms</li>
+                        <li>Used in matrices</li>
+                        <li>Used in database records</li>
+                    </ul>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/two-sum/">Two Sum</a></li>
+                            <li><a href="https://leetcode.com/problems/rotate-array/">Rotate Array</a></li>
+                            <li><a href="https://leetcode.com/problems/maximum-subarray/">Maximum Subarray</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-example" data-type="array" data-data='{"elements": [1,2,3,4,5]}'>
+                        <h3>Interactive Array Visualization</h3>
+                    </div>
+
+                    <div class="quiz-container">
+                        <h3>Test Your Knowledge</h3>
+                        <div class="quiz-question">
+                            <p>What is the time complexity of accessing an element in an array?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option">O(1)</div>
+                                <div class="quiz-option">O(n)</div>
+                                <div class="quiz-option">O(log n)</div>
+                                <div class="quiz-option">O(n²)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="linked-lists" class="doc-section">
+                <h2>Linked Lists</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>A linked list is a linear data structure where elements are stored in nodes, and each node points to the next node in the sequence. Unlike arrays, linked lists are not stored in contiguous memory locations.</p>
+                    
+                    <h3>Types of Linked Lists</h3>
+                    <ul>
+                        <li>Singly Linked List</li>
+                        <li>Doubly Linked List</li>
+                        <li>Circular Linked List</li>
+                        <li>Circular Doubly Linked List</li>
+                    </ul>
+
+                    <h3>Basic Operations</h3>
+                    <div class="code-example">
+                        <h4>Node Structure and Basic Operations</h4>
+                        <pre><code class="language-cpp">
+// Node Structure
+struct Node {
+    int data;
+    Node* next;
+};
+
+// Insertion at beginning
+Node* insertAtBeginning(Node* head, int data) {
+    Node* newNode = new Node();
+    newNode->data = data;
+    newNode->next = head;
+    return newNode;
+}
+
+// Deletion
+Node* deleteNode(Node* head, int key) {
+    if (head == NULL) return NULL;
+    if (head->data == key) {
+        Node* temp = head->next;
+        delete head;
+        return temp;
+    }
+    head->next = deleteNode(head->next, key);
+    return head;
+}
+
+// Search
+bool search(Node* head, int key) {
+    Node* current = head;
+    while (current != NULL) {
+        if (current->data == key)
+            return true;
+        current = current->next;
+    }
+    return false;
+}
+                        </code></pre>
+                    </div>
+
+                    <h3>Time Complexity</h3>
+                    <table class="complexity-table">
+                        <tr>
+                            <th>Operation</th>
+                            <th>Time Complexity</th>
+                        </tr>
+                        <tr>
+                            <td>Access</td>
+                            <td>O(n)</td>
+                        </tr>
+                        <tr>
+                            <td>Search</td>
+                            <td>O(n)</td>
+                        </tr>
+                        <tr>
+                            <td>Insertion</td>
+                            <td>O(1) at beginning, O(n) at end</td>
+                        </tr>
+                        <tr>
+                            <td>Deletion</td>
+                            <td>O(1) at beginning, O(n) at end</td>
+                        </tr>
+                    </table>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/reverse-linked-list/">Reverse Linked List</a></li>
+                            <li><a href="https://leetcode.com/problems/linked-list-cycle/">Linked List Cycle</a></li>
+                            <li><a href="https://leetcode.com/problems/merge-two-sorted-lists/">Merge Two Sorted Lists</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recursion" class="doc-section">
+                <h2>Recursion</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>Recursion is a programming technique where a function calls itself to solve a problem. It's particularly useful for problems that can be broken down into smaller, similar subproblems.</p>
+                    
+                    <h3>Key Concepts</h3>
+                    <ul>
+                        <li>Base Case: The condition that stops the recursion</li>
+                        <li>Recursive Case: The part where the function calls itself</li>
+                        <li>Call Stack: The stack of function calls during recursion</li>
+                        <li>Stack Overflow: When recursion goes too deep</li>
+                    </ul>
+
+                    <h3>Examples</h3>
+                    <div class="code-example">
+                        <h4>Basic Recursion Examples</h4>
+                        <pre><code class="language-cpp">
+// Factorial
+int factorial(int n) {
+    if (n <= 1) return 1;  // Base case
+    return n * factorial(n-1);  // Recursive case
+}
+
+// Fibonacci
+int fibonacci(int n) {
+    if (n <= 1) return n;  // Base case
+    return fibonacci(n-1) + fibonacci(n-2);  // Recursive case
+}
+
+// Binary Search
+int binarySearch(int arr[], int l, int r, int x) {
+    if (r >= l) {
+        int mid = l + (r - l) / 2;
+        if (arr[mid] == x) return mid;
+        if (arr[mid] > x) return binarySearch(arr, l, mid-1, x);
+        return binarySearch(arr, mid+1, r, x);
+    }
+    return -1;
+}
+                        </code></pre>
+                    </div>
+
+                    <h3>Common Applications</h3>
+                    <ul>
+                        <li>Tree Traversals</li>
+                        <li>Graph Traversals (DFS)</li>
+                        <li>Backtracking Algorithms</li>
+                        <li>Divide and Conquer Algorithms</li>
+                    </ul>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/power-of-two/">Power of Two</a></li>
+                            <li><a href="https://leetcode.com/problems/powx-n/">Pow(x, n)</a></li>
+                            <li><a href="https://leetcode.com/problems/permutations/">Permutations</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="trees" class="doc-section">
+                <h2>Trees</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>A tree is a hierarchical data structure consisting of nodes connected by edges. Each node can have multiple children but only one parent (except the root node).</p>
+                    
+                    <h3>Types of Trees</h3>
+                    <ul>
+                        <li>Binary Tree</li>
+                        <li>Binary Search Tree</li>
+                        <li>AVL Tree</li>
+                        <li>Red-Black Tree</li>
+                        <li>B-Tree</li>
+                    </ul>
+
+                    <h3>Tree Traversals</h3>
+                    <div class="code-example">
+                        <h4>Tree Node Structure and Traversals</h4>
+                        <pre><code class="language-cpp">
+// Node Structure
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+};
+
+// Inorder Traversal (Left -> Root -> Right)
+void inorder(TreeNode* root) {
+    if (root == NULL) return;
+    inorder(root->left);
+    cout << root->val << " ";
+    inorder(root->right);
+}
+
+// Preorder Traversal (Root -> Left -> Right)
+void preorder(TreeNode* root) {
+    if (root == NULL) return;
+    cout << root->val << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
+
+// Postorder Traversal (Left -> Right -> Root)
+void postorder(TreeNode* root) {
+    if (root == NULL) return;
+    postorder(root->left);
+    postorder(root->right);
+    cout << root->val << " ";
+}
+                        </code></pre>
+                    </div>
+
+                    <h3>Time Complexity</h3>
+                    <table class="complexity-table">
+                        <tr>
+                            <th>Operation</th>
+                            <th>Time Complexity</th>
+                        </tr>
+                        <tr>
+                            <td>Search</td>
+                            <td>O(h) where h is height</td>
+                        </tr>
+                        <tr>
+                            <td>Insertion</td>
+                            <td>O(h)</td>
+                        </tr>
+                        <tr>
+                            <td>Deletion</td>
+                            <td>O(h)</td>
+                        </tr>
+                        <tr>
+                            <td>Traversal</td>
+                            <td>O(n)</td>
+                        </tr>
+                    </table>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></li>
+                            <li><a href="https://leetcode.com/problems/validate-binary-search-tree/">Validate Binary Search Tree</a></li>
+                            <li><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stacks" class="doc-section">
+                <h2>Stacks</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>A stack is a linear data structure that follows the Last In First Out (LIFO) principle. Elements can only be added or removed from the top of the stack.</p>
+                    
+                    <h3>Operations</h3>
+                    <ul>
+                        <li>Push: Add an element to the top</li>
+                        <li>Pop: Remove the top element</li>
+                        <li>Peek/Top: View the top element</li>
+                        <li>isEmpty: Check if stack is empty</li>
+                    </ul>
+
+                    <h3>Implementation</h3>
+                    <div class="code-example">
+                        <h4>Stack Implementation</h4>
+                        <pre><code class="language-cpp">
+class Stack {
+private:
+    vector<int> arr;
+    
+public:
+    void push(int x) {
+        arr.push_back(x);
+    }
+    
+    int pop() {
+        if (isEmpty()) return -1;
+        int x = arr.back();
+        arr.pop_back();
+        return x;
+    }
+    
+    int peek() {
+        if (isEmpty()) return -1;
+        return arr.back();
+    }
+    
+    bool isEmpty() {
+        return arr.empty();
+    }
+};
+                        </code></pre>
+                    </div>
+
+                    <h3>Applications</h3>
+                    <ul>
+                        <li>Function Call Stack</li>
+                        <li>Expression Evaluation</li>
+                        <li>Backtracking</li>
+                        <li>Undo/Redo Operations</li>
+                    </ul>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/valid-parentheses/">Valid Parentheses</a></li>
+                            <li><a href="https://leetcode.com/problems/min-stack/">Min Stack</a></li>
+                            <li><a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="queues" class="doc-section">
+                <h2>Queues</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>A queue is a linear data structure that follows the First In First Out (FIFO) principle. Elements are added at the rear and removed from the front.</p>
+                    
+                    <h3>Types of Queues</h3>
+                    <ul>
+                        <li>Simple Queue</li>
+                        <li>Circular Queue</li>
+                        <li>Priority Queue</li>
+                        <li>Double Ended Queue (Deque)</li>
+                    </ul>
+
+                    <h3>Implementation</h3>
+                    <div class="code-example">
+                        <h4>Queue Implementation</h4>
+                        <pre><code class="language-cpp">
+class Queue {
+private:
+    vector<int> arr;
+    
+public:
+    void enqueue(int x) {
+        arr.push_back(x);
+    }
+    
+    int dequeue() {
+        if (isEmpty()) return -1;
+        int x = arr.front();
+        arr.erase(arr.begin());
+        return x;
+    }
+    
+    int front() {
+        if (isEmpty()) return -1;
+        return arr.front();
+    }
+    
+    bool isEmpty() {
+        return arr.empty();
+    }
+};
+                        </code></pre>
+                    </div>
+
+                    <h3>Applications</h3>
+                    <ul>
+                        <li>Breadth-First Search</li>
+                        <li>Print Queue</li>
+                        <li>Task Scheduling</li>
+                        <li>Buffer Management</li>
+                    </ul>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/implement-queue-using-stacks/">Implement Queue using Stacks</a></li>
+                            <li><a href="https://leetcode.com/problems/design-circular-queue/">Design Circular Queue</a></li>
+                            <li><a href="https://leetcode.com/problems/design-circular-deque/">Design Circular Deque</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="graphs" class="doc-section">
+                <h2>Graphs</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>A graph is a non-linear data structure consisting of vertices (nodes) and edges that connect these vertices. Graphs can be directed or undirected, weighted or unweighted.</p>
+                    
+                    <h3>Graph Representations</h3>
+                    <ul>
+                        <li>Adjacency Matrix</li>
+                        <li>Adjacency List</li>
+                        <li>Edge List</li>
+                    </ul>
+
+                    <h3>Graph Traversals</h3>
+                    <div class="code-example">
+                        <h4>Graph Implementation and Traversals</h4>
+                        <pre><code class="language-cpp">
+// Adjacency List Representation
+class Graph {
+private:
+    int V;
+    vector<vector<int>> adj;
+    
+public:
+    Graph(int vertices) {
+        V = vertices;
+        adj.resize(vertices);
+    }
+    
+    void addEdge(int u, int v) {
+        adj[u].push_back(v);
+        adj[v].push_back(u);  // For undirected graph
+    }
+    
+    // DFS
+    void DFS(int v, vector<bool>& visited) {
+        visited[v] = true;
+        cout << v << " ";
+        for (int u : adj[v]) {
+            if (!visited[u])
+                DFS(u, visited);
+        }
+    }
+    
+    // BFS
+    void BFS(int s) {
+        vector<bool> visited(V, false);
+        queue<int> q;
+        visited[s] = true;
+        q.push(s);
+        
+        while (!q.empty()) {
+            int v = q.front();
+            cout << v << " ";
+            q.pop();
+            
+            for (int u : adj[v]) {
+                if (!visited[u]) {
+                    visited[u] = true;
+                    q.push(u);
+                }
+            }
+        }
+    }
+};
+                        </code></pre>
+                    </div>
+
+                    <h3>Common Graph Algorithms</h3>
+                    <ul>
+                        <li>Depth-First Search (DFS)</li>
+                        <li>Breadth-First Search (BFS)</li>
+                        <li>Dijkstra's Algorithm</li>
+                        <li>Kruskal's Algorithm</li>
+                        <li>Prim's Algorithm</li>
+                    </ul>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/number-of-islands/">Number of Islands</a></li>
+                            <li><a href="https://leetcode.com/problems/course-schedule/">Course Schedule</a></li>
+                            <li><a href="https://leetcode.com/problems/network-delay-time/">Network Delay Time</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dp" class="doc-section">
+                <h2>Dynamic Programming</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>Dynamic Programming is an optimization technique that breaks down complex problems into simpler subproblems and stores the results for future use. It's particularly useful for problems with overlapping subproblems and optimal substructure.</p>
+                    
+                    <h3>Key Concepts</h3>
+                    <ul>
+                        <li>Overlapping Subproblems: Same subproblems are encountered multiple times</li>
+                        <li>Optimal Substructure: Optimal solution can be constructed from optimal solutions of subproblems</li>
+                        <li>Memoization: Top-down approach with caching</li>
+                        <li>Tabulation: Bottom-up approach with table filling</li>
+                    </ul>
+
+                    <h3>Common DP Patterns</h3>
+                    <div class="code-example">
+                        <h4>Fibonacci with DP</h4>
+                        <pre><code class="language-cpp">
+// Memoization (Top-down)
+int fibMemo(int n, vector<int>& dp) {
+    if (n <= 1) return n;
+    if (dp[n] != -1) return dp[n];
+    return dp[n] = fibMemo(n-1, dp) + fibMemo(n-2, dp);
+}
+
+// Tabulation (Bottom-up)
+int fibTab(int n) {
+    vector<int> dp(n+1);
+    dp[0] = 0;
+    dp[1] = 1;
+    for(int i = 2; i <= n; i++)
+        dp[i] = dp[i-1] + dp[i-2];
+    return dp[n];
+}
+                        </code></pre>
+                    </div>
+
+                    <h3>Types of DP Problems</h3>
+                    <ul>
+                        <li>0/1 Knapsack</li>
+                        <li>Longest Common Subsequence</li>
+                        <li>Matrix Chain Multiplication</li>
+                        <li>Coin Change</li>
+                        <li>Longest Increasing Subsequence</li>
+                    </ul>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/climbing-stairs/">Climbing Stairs</a></li>
+                            <li><a href="https://leetcode.com/problems/coin-change/">Coin Change</a></li>
+                            <li><a href="https://leetcode.com/problems/longest-increasing-subsequence/">Longest Increasing Subsequence</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="greedy" class="doc-section">
+                <h2>Greedy Algorithms</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>Greedy algorithms make locally optimal choices at each step with the hope of finding a global optimum. They are simple and efficient but don't always guarantee the optimal solution.</p>
+                    
+                    <h3>Key Characteristics</h3>
+                    <ul>
+                        <li>Makes locally optimal choice at each step</li>
+                        <li>Never reconsider previous choices</li>
+                        <li>Often used for optimization problems</li>
+                        <li>May not always give optimal solution</li>
+                    </ul>
+
+                    <h3>Common Greedy Problems</h3>
+                    <div class="code-example">
+                        <h4>Fractional Knapsack</h4>
+                        <pre><code class="language-cpp">
+struct Item {
+    int value, weight;
+    double ratio;
+};
+
+bool compare(Item a, Item b) {
+    return a.ratio > b.ratio;
+}
+
+double fractionalKnapsack(int W, Item arr[], int n) {
+    for(int i = 0; i < n; i++)
+        arr[i].ratio = (double)arr[i].value / arr[i].weight;
+    
+    sort(arr, arr + n, compare);
+    
+    double result = 0.0;
+    for(int i = 0; i < n; i++) {
+        if(W >= arr[i].weight) {
+            result += arr[i].value;
+            W -= arr[i].weight;
+        } else {
+            result += arr[i].ratio * W;
+            break;
+        }
+    }
+    return result;
+}
+                        </code></pre>
+                    </div>
+
+                    <h3>Applications</h3>
+                    <ul>
+                        <li>Huffman Coding</li>
+                        <li>Prim's Algorithm</li>
+                        <li>Kruskal's Algorithm</li>
+                        <li>Job Scheduling</li>
+                        <li>Coin Change (with certain coin denominations)</li>
+                    </ul>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/jump-game/">Jump Game</a></li>
+                            <li><a href="https://leetcode.com/problems/gas-station/">Gas Station</a></li>
+                            <li><a href="https://leetcode.com/problems/task-scheduler/">Task Scheduler</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="backtracking" class="doc-section">
+                <h2>Backtracking</h2>
+                <div class="content">
+                    <h3>Introduction</h3>
+                    <p>Backtracking is an algorithmic technique for finding all (or some) solutions to computational problems by incrementally building candidates and abandoning them if they don't satisfy the constraints.</p>
+                    
+                    <h3>Key Concepts</h3>
+                    <ul>
+                        <li>Systematic Search: Explores all possible solutions</li>
+                        <li>Constraint Satisfaction: Checks if current solution satisfies all constraints</li>
+                        <li>State Space Tree: Represents all possible solutions</li>
+                        <li>Pruning: Eliminating invalid solutions early</li>
+                    </ul>
+
+                    <h3>Common Backtracking Problems</h3>
+                    <div class="code-example">
+                        <h4>N-Queens Problem</h4>
+                        <pre><code class="language-cpp">
+bool isSafe(vector<string>& board, int row, int col, int n) {
+    // Check row
+    for(int j = 0; j < col; j++)
+        if(board[row][j] == 'Q') return false;
+    
+    // Check upper diagonal
+    for(int i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        if(board[i][j] == 'Q') return false;
+    
+    // Check lower diagonal
+    for(int i = row, j = col; i < n && j >= 0; i++, j--)
+        if(board[i][j] == 'Q') return false;
+    
+    return true;
+}
+
+bool solveNQueensUtil(vector<string>& board, int col, int n) {
+    if(col >= n) return true;
+    
+    for(int i = 0; i < n; i++) {
+        if(isSafe(board, i, col, n)) {
+            board[i][col] = 'Q';
+            if(solveNQueensUtil(board, col + 1, n))
+                return true;
+            board[i][col] = '.';
+        }
+    }
+    return false;
+}
+                        </code></pre>
+                    </div>
+
+                    <h3>Applications</h3>
+                    <ul>
+                        <li>N-Queens Problem</li>
+                        <li>Sudoku Solver</li>
+                        <li>Rat in a Maze</li>
+                        <li>Knight's Tour</li>
+                        <li>Subset Sum</li>
+                    </ul>
+
+                    <div class="practice-section">
+                        <h3>Practice Problems</h3>
+                        <ul>
+                            <li><a href="https://leetcode.com/problems/n-queens/">N-Queens</a></li>
+                            <li><a href="https://leetcode.com/problems/sudoku-solver/">Sudoku Solver</a></li>
+                            <li><a href="https://leetcode.com/problems/permutations/">Permutations</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CodeMaster</h3>
+                <p>Your journey to coding excellence starts here</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#data-structures">Data Structures</a></li>
+                    <li><a href="#algorithms">Algorithms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CodeMaster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="docs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script>
+    <script src="interactive.js"></script>
+</body>
+</html> 

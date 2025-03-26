@@ -1,0 +1,329 @@
+/* Modern Documentation Styles */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --sidebar-bg: #f8fafc;
+    --code-bg: #1e293b;
+    --border-color: #e5e7eb;
+    --hover-color: #f3f4f6;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --primary-color: #3b82f6;
+    --secondary-color: #60a5fa;
+    --text-color: #f3f4f6;
+    --bg-color: #111827;
+    --sidebar-bg: #1f2937;
+    --code-bg: #0f172a;
+    --border-color: #374151;
+    --hover-color: #1f2937;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .navbar {
+    background-color: rgba(17, 24, 39, 0.9);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+/* Documentation Container */
+.docs-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: calc(100vh - 64px);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    background-color: var(--sidebar-bg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.sidebar-content h3 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
+}
+
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-content li {
+    margin: 0.5rem 0;
+}
+
+.sidebar-content a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.sidebar-content a:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.doc-section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.doc-section h2 {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.doc-section h3 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.doc-section p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Code Examples */
+.code-example {
+    position: relative;
+    background-color: var(--code-bg);
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.code-example pre {
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.code-example code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Tables */
+.complexity-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: var(--bg-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.complexity-table th,
+.complexity-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.complexity-table th {
+    background-color: var(--hover-color);
+    font-weight: 600;
+}
+
+/* Practice Section */
+.practice-section {
+    background-color: var(--hover-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.practice-section h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.practice-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.practice-section li {
+    margin: 0.5rem 0;
+}
+
+.practice-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.practice-section a:hover {
+    background-color: var(--bg-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .docs-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.active {
+        display: block;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: calc(100vh - 64px);
+        z-index: 90;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .doc-section {
+        padding: 1rem;
+    }
+
+    .doc-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .doc-section h3 {
+        font-size: 1.25rem;
+    }
+} 
